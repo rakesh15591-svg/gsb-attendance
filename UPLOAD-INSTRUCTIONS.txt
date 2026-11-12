@@ -1,0 +1,18 @@
+GSB Attendance - Vercel upload fix
+
+This package is arranged to match the file layout currently visible in your Vercel Source tab.
+The important correction is index.html loading /main.jsx because main.jsx is at the project root.
+
+Upload the CONTENTS of this folder as one project (not the outer folder nested inside another folder).
+Keep package.json, index.html, main.jsx, App.jsx, style.css, supabase.js and vercel.json together at the project root.
+Keep the supabase folder and its schema.sql file.
+
+Vercel build settings:
+Framework Preset: Vite
+Build Command: npm run build
+Output Directory: dist
+Install Command: npm install (default)
+
+If the Vercel upload screen accepts a ZIP, upload this ZIP. If it asks for files/folder, extract this ZIP first and upload the contents of GSB_Attendance_Vercel_Fixed.
+
+Note: this corrects the path mismatch seen in the supplied build log. Supabase environment variables still need to be configured for live database/login functionality. Without them, the app uses its demo preview mode.
